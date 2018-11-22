@@ -33,7 +33,7 @@
 
 		?>
 
-<scrip>alert("Por favor inicia sesión");</scrip>
+<script>alert("Por favor inicia sesión");</script>
 <script>window.location = "index.php";</script>		
 
 		<?php

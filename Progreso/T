@@ -1,0 +1,29 @@
+<?php
+
+	session_start();
+
+	if (isset($_SESSION['modo'])) {
+		$tipo = $_SESSION['modo'];
+
+		if($tipo == 'consulta'){
+			
+		} else if($tipo == 'caja'){
+			
+		} else {
+			
+		}
+
+	} else {
+		
+
+	}
+
+		
+	//include("./configBD.php");
+	//$sql1 = "select rfc, nombre, codigo from ganador where ";
+	//$res = mysqli_query($conexion, $sql1);
+	//while($tupla = mysqli_fetch_row($res)){
+
+?>
+
+<script>window.location = "index.php";</script>

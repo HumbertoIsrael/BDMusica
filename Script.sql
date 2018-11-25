@@ -18,3 +18,5 @@ insert into Cajero values('PENX123456', 1, 'Los pinos 123', 'Enrique', 'Pena', '
 insert into Socio values('AABB998877HDFCDE22', '2019-01-01', '2018-12-31', 'AAAA', 'BBBB', 'BBBB');
 insert into Venta values(1, 'PENX123456', 'AABB998877HDFCDE22', '2018-11-18', 12.95);
 insert into productosVta values(1, 1, 1);
+
+create view vwInventario as select p.nombre as 'producto', p.precio, p.imagen, s.nombre as 'sucursal', s.id_sucursal, u.unidades from Producto p, Inventario u, Sucursal s where p.id_producto = u.id_producto and s.id_sucursal = u.id_sucursal and u.unidades > 0;

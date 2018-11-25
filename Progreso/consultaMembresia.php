@@ -26,6 +26,12 @@
 
 				return false;
 			}
+
+			function Limpia(){
+				$("#contenido").html("");
+				return false;
+			}
+
 		</script>
 	</head>
 	<body>
@@ -33,6 +39,7 @@
 			<h1>Consulta por CURP</h1>
 			<input type="text" id="curp" name = "curp"><br>
 			<button type="submit" onclick="return Busca();">Buscar</button>
+			<button onclick = "return Limpia();">Limpiar</button>
 		</form>
 		<div id='contenido'>
 			

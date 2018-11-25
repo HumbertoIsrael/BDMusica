@@ -33,8 +33,7 @@
 
 		?>
 
-<script>alert("Por favor inicia sesión");</script>
-<script>window.location = "index.php";</script>		
+<meta http-equiv="Refresh" content="0; url=./" />	
 
 		<?php
 

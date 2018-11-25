@@ -5,7 +5,7 @@ function login(){
         data:$("#formulario").serialize(),                
         success:function(resp){                                    	                	
             if(resp == 1){                       
-                window.location = "index.php";
+                window.location = "./";
             }else{
                 alert("Datos incorrectos");
             }

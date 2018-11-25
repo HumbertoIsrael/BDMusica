@@ -52,8 +52,7 @@
 			//Si no es administración, no debería de mostrarse el contenido.
 
 			?>
-<script>alert("Por favor inicia sesión");</script>
-<script>window.location = "index.php";</script>		
+<meta http-equiv="Refresh" content="0; url=./" />
 			<?php
 		}
 
@@ -61,10 +60,7 @@
 		//Tampoco si no hay sesión iniciada.
 
 		?>
-
-<script>alert("Por favor inicia sesión");</script>
-<script>window.location = "index.php";</script>		
-
+<meta http-equiv="Refresh" content="0; url=./" />
 		<?php
 	}
 

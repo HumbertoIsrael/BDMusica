@@ -19,11 +19,11 @@
 					$telefono = $tupla[2];
 
 					$contenido .= 
-		"<div id='$nombre_' name='sucursales'> 
-	    	Nombre: $nombre<br>
-	    	Dirección: $direccion<br>
-	    	Teléfono: $telefono<br>
-	    </div>\n";
+			"<tr id='$nombre_' name='sucursales'> 
+	    		<td>$nombre</td>
+	    		<td>$direccion</td>
+	    		<td>$telefono</td>
+	    	</tr>\n";
 				}
 
 ?>
@@ -39,14 +39,21 @@
 	</head>
 	<body>
 	    Buscar: <input type="text" id="busqueda" oninput="Busca()"><br>
-	    <?php echo $contenido ?>	   
+	    <table>
+	    	<tr>
+	    		<th>Nombre</th>
+	    		<th>Dirección</th>
+	    		<th>Teléfono</th>
+	    	</tr>
+	    	<?php echo $contenido ?>
+	    </table>	    
 	</body>
 </html>
 <?php				
 
 		} else {
 		?>
-<script>window.location = "index.php";</script>		
+<meta http-equiv="Refresh" content="0; url=./" /> 	
 		<?php			
 		}
 
@@ -55,7 +62,7 @@
 
 		
 		?>
-<script>window.location = "index.php";</script>
+<meta http-equiv="Refresh" content="0; url=./" />
 		<?php
 	}
 

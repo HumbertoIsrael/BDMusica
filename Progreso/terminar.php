@@ -6,4 +6,4 @@
 
 ?>
 
-<script>window.location = "index.php";</script>
+<meta http-equiv="Refresh" content="0; url=./" />

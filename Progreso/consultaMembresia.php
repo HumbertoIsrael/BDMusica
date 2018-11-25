@@ -12,27 +12,7 @@
 <html>
 	<head>
 		<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript">
-			function Busca(){
-
-				$.ajax({
-			        method:"post",
-			        url:"consultaMembresiaBE.php",
-			        data:$("#formulario").serialize(),                
-			        success:function(resp){                                    	                	
-			            $("#contenido").html( resp	);
-			        }
-			    });
-
-				return false;
-			}
-
-			function Limpia(){
-				$("#contenido").html("");
-				return false;
-			}
-
-		</script>
+		<script type="text/javascript" src="./js/consultaMembresia.js"></script>
 	</head>
 	<body>
 		<form id='formulario'>
@@ -51,14 +31,14 @@
 			
 		} else {
 ?>
-<script>window.location = "index.php";</script>
+<meta http-equiv="Refresh" content="0; url=./" />
 <?php			
 		}
 
 	} else {
 		
 ?>
-<script>window.location = "index.php";</script>
+<meta http-equiv="Refresh" content="0; url=./" />
 <?php
 	}
 

@@ -16,31 +16,54 @@
 			else $sql = "select * from vwInventario where id_sucursal = '$id_sucursal' order by 1";			
 			
 			$res = mysqli_query($conexion, $sql);
-			$cnt = 0;			
+			$cnt = 0;
+
+			?>
+<table>
+
+	<tr>
+		<th>Producto</th>
+		<th>Precio</th>
+		<th>Stock</th>
+		<th>Imagen</th>
+			
+			<?php
+			if($donde == "todas"){
+				?>
+		<th>Sucursal</th>
+				<?php
+			}
+			?>
+	</tr>	
+
+			<?php
+
 			while($tupla = mysqli_fetch_row($res)){		
 
 				$cnt = $cnt + 1;
 
 				?>
-<div id="<?php echo $tupla[0]; ?>" name="articulo">
-	Producto : <?php echo str_replace(" ", "_", $tupla[0])?><br>
-	Precio : <?php echo $tupla[1]?><br>
-	Imagen : <?php echo $tupla[2]?><br>
-	Stock : <?php echo $tupla[5]?><br>
+				
+	<tr id="<?php echo $tupla[0]; ?>" name="articulo">
+		<td><?php echo str_replace(" ", "_", $tupla[0])?></td>
+		<td><?php echo $tupla[1]?></td>
+		<td><?php echo $tupla[5]?></td>
+		<td><?php echo $tupla[2]?></td>
 
 				<?php
 				if($donde == "todas"){
 					?>
-	Sucursal : <?php echo $tupla[3]?><br>					
+		<td><?php echo $tupla[3]?></td>
 					<?php
 				}
 				?>
-
-
-</div>
+	</tr>
 				<?php
 
 			}
+			?>
+</table>
+			<?php
 
 			//
 	//$sql1 = "select rfc, nombre, codigo from ganador where ";

@@ -52,8 +52,7 @@
 
 		} else {
 			?>
-<script>alert("Tu tipo de usuario no puede ver esta pagina");</script>
-<script>window.location = "index.php";</script>		
+<meta http-equiv="Refresh" content="0; url=./" />
 			<?php
 		}
 
@@ -64,10 +63,7 @@
 		//Se puede combinar PHP y html. 
 
 		?>
-
-<script>alert("Por favor inicia sesión");</script>
-<script>window.location = "index.php";</script>		
-
+<meta http-equiv="Refresh" content="0; url=./" />
 		<?php
 
 	}

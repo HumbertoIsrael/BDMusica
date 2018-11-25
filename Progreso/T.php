@@ -26,7 +26,7 @@
 
 ?>
 
-<!--script>window.location = "index.php";</script-->
+<!--<meta http-equiv="Refresh" content="0; url=./" />-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -42,6 +42,7 @@
 	</head>
 	<body>
 	    <div class="container">
+	    	
 	    	<!-- Aquí va todo -->
 	    </div>
 	</body>

@@ -5,7 +5,7 @@
 
 	if (isset($_SESSION['modo'])) {
 	?>
-<script>window.location = "index.php";</script>
+
 	<?php		
 
 	} else {

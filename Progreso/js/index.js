@@ -27,7 +27,7 @@ function terminarConsulta(){
 					        	if(resp == 1) window.location = 'index.php';
 					        	else {
 					        		$.alert("Contraseña incorrecta");
-					        	}
+					        	}					        	
 					        }
 		                });
 
@@ -35,8 +35,8 @@ function terminarConsulta(){
 	                    
 	                }
 	            },
-	            cancel: function () {
-	                //close
+	            cancel: function () {	            	
+
 	            },
 	        },
 		    onContentReady: function () {
@@ -46,7 +46,10 @@ function terminarConsulta(){
 		            e.preventDefault();
 		            jc.$$formSubmit.trigger('click'); // reference the button and click it
 		        });
-		    }			      
+		    },
+		    onDestroy: function () {
+				$("#btnTerminar").blur();
+			}		      
 	    });
 	/*$.ajax({
         method:"post",

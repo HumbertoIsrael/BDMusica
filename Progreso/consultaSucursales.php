@@ -30,23 +30,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <meta charset="utf-8" />
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>Sucursales</title>
-	    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-	    <script type="text/javascript" src="./js/consultaSucursales.js"></script>
+			    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">	    
 	    <meta name="viewport" content="width=device-width, initial-scale=1">	    	    
+	    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>	    
+	    <script type="text/javascript" src="./confirm330/js/jquery-confirm.js"></script>				
+	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+	    <script type="text/javascript" src="./js/consultaSucursales.js"></script>	    
+		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
+		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	    
+	    <title>Sucursales</title>	    	    
 	</head>
 	<body>
-	    Buscar: <input type="text" id="busqueda" oninput="Busca()"><br>
-	    <table>
-	    	<tr>
-	    		<th>Nombre</th>
-	    		<th>Dirección</th>
-	    		<th>Teléfono</th>
-	    	</tr>
-	    	<?php echo $contenido ?>
-	    </table>	    
+		<div class="container">
+			<div class="row">
+				<div class="col s12 center-align">
+					<h3>Sucursales</h3>	
+				</div>
+			</div>
+			<div class="row">    			      
+				<div class="input-field col s5">
+          			<i class="material-icons prefix">search</i>
+          			<label for="busqueda">Buscar</label>
+          			<input id="busqueda" type="text" oninput="Busca();" >          			
+        		</div>        
+      		</div>  
+		    
+		    <table>
+		    	<tr>
+		    		<th>Nombre</th>
+		    		<th>Dirección</th>
+		    		<th>Teléfono</th>
+		    	</tr>
+		    	<?php echo $contenido ?>
+		    </table>	    
+		</div>
 	</body>
 </html>
 <?php				

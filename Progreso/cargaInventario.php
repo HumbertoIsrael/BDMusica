@@ -20,22 +20,22 @@
 
 			?>
 <table>
-
-	<tr>
-		<th>Producto</th>
-		<th>Precio</th>
-		<th>Stock</th>
-		<th>Imagen</th>
+	<thead>
+		<tr>
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Stock</th>
+			<th>Imagen</th>
 			
 			<?php
 			if($donde == "todas"){
 				?>
-		<th>Sucursal</th>
+			<th>Sucursal</th>
 				<?php
 			}
 			?>
-	</tr>	
-
+		</tr>	
+	</thead>
 			<?php
 
 			while($tupla = mysqli_fetch_row($res)){		
@@ -43,25 +43,26 @@
 				$cnt = $cnt + 1;
 
 				?>
-				
-	<tr id="<?php echo $tupla[0]; ?>" name="articulo">
-		<td><?php echo str_replace(" ", "_", $tupla[0])?></td>
-		<td><?php echo $tupla[1]?></td>
-		<td><?php echo $tupla[5]?></td>
-		<td><?php echo $tupla[2]?></td>
+	<tbody>
+		<tr id="<?php echo $tupla[0]; ?>" name="articulo">
+			<td><?php echo str_replace(" ", "_", $tupla[0])?></td>
+			<td><?php echo $tupla[1]?></td>
+			<td><?php echo $tupla[5]?></td>
+			<td><?php echo $tupla[2]?></td>
 
 				<?php
 				if($donde == "todas"){
 					?>
-		<td><?php echo $tupla[3]?></td>
+			<td><?php echo $tupla[3]?></td>
 					<?php
 				}
 				?>
-	</tr>
+		</tr>
 				<?php
 
 			}
 			?>
+	</tbody>
 </table>
 			<?php
 

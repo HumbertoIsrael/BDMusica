@@ -36,7 +36,7 @@
 		            <a href="consultaSucursales.php"  class="waves-effect waves-light btn" style="width: 100%">Sucursales</a>
 		        </div>
 		        <div class="col s12 m6 offset-m3 input-field">
-		            <button class="waves-effect waves-light btn" style="width: 100%" onclick="terminarConsulta();">Terminar Consultas</button>
+		            <button class="waves-effect waves-light btn" style="width: 100%" onclick="terminarConsulta();" id="btnTerminar">Terminar Consultas</button>
 		        </div>
 		     </div>			
 		</div>

@@ -7,7 +7,11 @@ function login(){
             if(resp == 1){                       
                 window.location = "./";
             }else{
-                alert("Datos incorrectos");
+                    $("#btnLogin").blur();
+                    $.alert({
+                        title: 'Datos incorrectos',
+                        content: 'Por favor intente de nuevo'
+                    });                
             }
         }
     });

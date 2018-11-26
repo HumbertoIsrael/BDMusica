@@ -59,11 +59,12 @@ function sufijo(s, t){
 function Carga(){
 	donde = $('input[name=donde]:checked').val();
 	
+
 	$.ajax({
         method:"post",
         url:"cargaInventario.php",
-        data: "donde="+donde,
-        success:function(resp){
+        data: "donde="+donde,        
+        success:function(resp){        	
             $("#resultados").html( resp	);
         }
     });

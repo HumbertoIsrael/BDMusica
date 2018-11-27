@@ -10,7 +10,7 @@
 			
 				$sql = "select dir, nombre, tel from Sucursal;";
 				$res = mysqli_query($conexion, $sql);
-				$contenido = "";
+				$contenido = "";				
 				while($tupla = mysqli_fetch_row($res)){
 
 					$nombre = $tupla[1];

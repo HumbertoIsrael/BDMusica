@@ -1,0 +1,2 @@
+create view vwInventario as select p.nombre as 'producto', p.precio, p.idProducto, s.nombre as 'sucursal', s.idSucursal, u.unidades from Producto p, Inventario u, Sucursal s where p.idProducto = u.idProducto and s.idSucursal = u.idSucursal and u.unidades > 0;
+create view logCompras as select c.idCompra, c.fecha, c.importe, c.unidades, o.nombre as 'producto', e.nombre as 'proveedor' from Compra c, Proveedor e, Producto o where c.idProducto = o.idProducto and c.idProveedor = e.rfc;

@@ -10,12 +10,10 @@
 
 			$curp = $_POST['curp'];			
 			
-			$sql = "select * from Socio where curp = '$curp'";
-			echo $sql . "<br>";
+			$sql = "select * from Socio where curp = '$curp'";			
 			$res = mysqli_query($conexion, $sql);
 			$hay = mysqli_num_rows($res);
-
-			echo $hay."<br>";
+			
 			if($hay == 1){
 
 				$tupla = mysqli_fetch_row($res);

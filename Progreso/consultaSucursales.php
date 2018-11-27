@@ -57,14 +57,22 @@
         		</div>        
       		</div>  
 		    
-		    <table>
-		    	<tr>
-		    		<th>Nombre</th>
-		    		<th>Dirección</th>
-		    		<th>Teléfono</th>
-		    	</tr>
-		    	<?php echo $contenido ?>
-		    </table>	    
+		    <div class="row">
+			    <table>
+			    	<tr>
+			    		<th>Nombre</th>
+			    		<th>Dirección</th>
+			    		<th>Teléfono</th>
+			    	</tr>
+			    	<?php echo $contenido ?>
+		    	</table>	    
+		    </div>
+
+		    <div class="row">
+				<div class="col s1 offset-s11">
+					<a class="btn-floating btn-large waves-effect waves-light" href="./"><i class="material-icons">keyboard_arrow_left</i></a>
+				</div>			  
+			</div>
 		</div>
 	</body>
 </html>

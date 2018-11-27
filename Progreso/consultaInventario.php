@@ -21,7 +21,7 @@
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">		
 		<script type="text/javascript" src="./js/consultaInventario.js"></script>
-		<!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<title>Inventario</title>
 	</head>
 	<body onload="Carga();">
@@ -51,20 +51,27 @@
 
 			<div class="row">    			      
 				<div class="input-field col s4">
-          			<!--i class="material-icons prefix">search</i-->
+          			<i class="material-icons prefix">search</i>
           			<label for="busqueda">Buscar</label>
           			<input id="busqueda" type="text" oninput="Busca();" >          			
         		</div>        
       		</div>    
 
-
-			<div id='resultados'>
+      		<div class="row">      			      	
+				<div id='resultados'>
 			
+				</div>
 			</div>
-		</div>
 
+			<div class="row">
+				<div class="col s1 offset-s11">
+					<a class="btn-floating btn-large waves-effect waves-light" href="./"><i class="material-icons">keyboard_arrow_left</i></a>
+				</div>			  
+			</div>
+
+		</div>
 	</body>
-</html>
+</html>	
 
 			<?php
 			

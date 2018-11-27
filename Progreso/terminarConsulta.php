@@ -9,9 +9,9 @@
 		if($tipo == 'consulta'){
 			
 			$contra = $_POST['contra'];
-			$id_sucursal = $_SESSION['id_sucursal'];
+			$idSucursal = $_SESSION['idSucursal'];
 
-			$sql = "select count(*) from Gerente g, Sucursal s where g.rfc = s.id_gerente and s.id_sucursal = '$id_sucursal' and g.password = '$contra'";
+			$sql = "select count(*) from Gerente g, Sucursal s where g.rfc = s.idGerente and s.idSucursal = '$idSucursal' and g.password = '$contra'";
 			
 			$res = mysqli_query($conexion, $sql);
 			$tupla = mysqli_fetch_row($res);

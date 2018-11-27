@@ -8,40 +8,76 @@
 
 		$modo = $_SESSION['modo'];
 
-		if($modo == 'administracion'){
+		if($modo == 'caja'){
 					
 			//Aquí genera la página html.
 
 			?>
 
-<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="./js/nuevoCliente.js"></script>
 <html>
 	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">	    
+	    <meta name="viewport" content="width=device-width, initial-scale=1">	    	    
+	    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>	    
+	    <script type="text/javascript" src="./confirm330/js/jquery-confirm.js"></script>				
+	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
+		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	    
+	    <link href="./validetta/validetta.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./validetta/validetta.min.js"></script>
+		<script type="text/javascript" src="./validetta/validettaLang-es-ES.js"></script>
+		<script type="text/javascript" src="./js/nuevoCliente.js"></script>
 		<title>Registro Socio</title>
 	</head>
-	<body>
-		<h1>Rellena los siguientes campos</h1>
+	<body>		
+		<div class="container">
 
-		<!-- Este es un formulario donde se pueden poner los campos a llenar en la BD  -->
-		<!-- Cuando todo esté bien, llevará la información a la página subeCliente.php-->
-		<form id='formulario' method='POST' action='subeCliente.php'>
+			<div class="row">
+				<div class="col s12 center-align">
+					<h3>Nuevo Socio</h3>
+				</div>				
+			</div>
+			
 
-			<!-- Cada entrada le podemos asignar un id y un name.-->
-			CURP <input type='text' id='curp' name='curp'><br>
-			Nombre <input type='text' id='nombre' name='nombre'><br>
-			Apellido Paterno <input type='text' id='ap_pat' name='ap_pat'><br>
-			Apellido Materno <input type='text' id='ap_mat' name='ap_mat'><br>
+			<div class="row">
+				<form id='formulario' method='POST' action='subeCliente.php'>
 
-			<!-- Estos 2 no se ven, pero se mandan a la página -->
-			<input type='hidden' id='expira' name='expira'>
-			<input type='hidden' id='alta' name='alta'>
+					<div class="col s12 m6 offset-m3 input-field">
+		                <label for="curp">CUPR</label>
+		                <input type='text' id='curp' name='curp' data-validetta="required,regExp[curpExp]">
+		            </div>
 
-			<!-- rellena() está en nuevoCliente.js -->
-			<!-- Cuando se da clic, ejecuta rellena() y luego sube la información -->
-			<input type='submit' value ='Crear' onClick='rellena();'>
+		            <div class="col s12 m6 offset-m3 input-field">
+		                <label for="nombre">Nombre(s)</label>
+		                <input type='text' id='nombre' name='nombre' data-validetta="required">
+		            </div>
 
-		</form>
+		            <div class="col s12 m6 offset-m3 input-field">
+		                <label for="apPat">Apellido Paterno</label>
+		                <input type='text' id='apPat' name='apPat' data-validetta="required">
+		            </div>
+
+		            <div class="col s12 m6 offset-m3 input-field">
+		                <label for="apMat">Apellido Materno</label>
+		                <input type='text' id='apMat' name='apMat' data-validetta="required">
+		            </div>	           				
+					
+					<input type='hidden' id='expira' name='expira'>
+					<input type='hidden' id='alta' name='alta'>
+					<div class="col s12 m6 offset-m3 input-field">
+	                    <button type="submit" id="btnCrear" class="btn" style="width: 100%" onclick="rellena();">Registrar</button>
+	                </div>						                
+
+				</form>
+			</div>
+			<div class="row">
+				<div class="col s1 offset-s9">
+					<a class="btn-floating btn-large waves-effect waves-light" href="./"><i class="material-icons">keyboard_arrow_left</i></a>
+				</div>			  
+			</div>
+		</div>
 	</body>
 </html>
 

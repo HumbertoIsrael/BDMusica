@@ -9,12 +9,12 @@
 		if($tipo == 'consulta'){
 
 			$donde = $_POST['donde'];
-			$id_sucursal = $_SESSION['id_sucursal'];
+			$idSucursal = $_SESSION['idSucursal'];			
 			
 			$sql = "";
 			if($donde == "todas") $sql = "select * from vwInventario order by 1";
-			else $sql = "select * from vwInventario where id_sucursal = '$id_sucursal' order by 1";			
-			
+			else $sql = "select * from vwInventario where idSucursal = '$idSucursal' order by 1";
+
 			$res = mysqli_query($conexion, $sql);
 			$cnt = 0;
 
@@ -24,8 +24,7 @@
 		<tr>
 			<th>Producto</th>
 			<th>Precio</th>
-			<th>Stock</th>
-			<th>Imagen</th>
+			<th>Stock</th>			
 			
 			<?php
 			if($donde == "todas"){
@@ -34,6 +33,7 @@
 				<?php
 			}
 			?>
+			<th>Sobre el producto</th>
 		</tr>	
 	</thead>
 			<?php
@@ -44,11 +44,10 @@
 
 				?>
 	<tbody>
-		<tr id="<?php echo $tupla[0]; ?>" name="articulo">
-			<td><?php echo str_replace(" ", "_", $tupla[0])?></td>
+		<tr id="<?php echo str_replace(" ", "_", $tupla[0])?>" name="articulo">
+			<td><?php echo $tupla[0]; ?></td>
 			<td><?php echo $tupla[1]?></td>
-			<td><?php echo $tupla[5]?></td>
-			<td><?php echo $tupla[2]?></td>
+			<td><?php echo $tupla[5]?></td>			
 
 				<?php
 				if($donde == "todas"){
@@ -57,6 +56,7 @@
 					<?php
 				}
 				?>
+			<td><i class="material-icons" onclick="Muestra(<?php echo $tupla[2] ?>);">remove_red_eye</i></td>
 		</tr>
 				<?php
 

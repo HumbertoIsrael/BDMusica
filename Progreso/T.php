@@ -32,12 +32,15 @@
 	<head>
 	    <meta charset="utf-8" />
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">	    
-	    <meta name="viewport" content="width=device-width, initial-scale=1">	    	    
+	    <meta name="viewport" content="width=device-width, initial-scale=1">	    	  
+	    <script type="text/javascript" src="./../jscript/validetta/validetta.min.js"></script>
+		<script type="text/javascript" src="./../jscript/validetta/validettaLang-es-ES.js"></script>  
 	    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>	    
 	    <script type="text/javascript" src="./confirm330/js/jquery-confirm.js"></script>				
-	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>	    
 		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
+		<link href="./../jscript/validetta/validetta.min.css" rel="stylesheet">		
 	    <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
 	    <title></title>
 	</head>

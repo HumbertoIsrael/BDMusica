@@ -5,7 +5,10 @@ function Busca(){
         url:"consultaMembresiaBE.php",
         data:$("#formulario").serialize(),                
         success:function(resp){                                    	                	
-            $("#contenido").html( resp	);
+                $.dialog({
+                    title: 'Resultado',
+                    content: resp,
+                });
         }
     });
 

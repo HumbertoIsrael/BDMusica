@@ -88,3 +88,19 @@ function Busca(){
 	}	
 
 }
+
+function Muestra(idProducto){
+	
+	$.ajax({
+        method:"post",
+        url:"producto.php",              
+        data: "idProducto="+idProducto,
+        success:function(resp){        	
+                $.dialog({
+			        title: 'Sobre el producto',
+			        content: resp,
+			    });
+        }
+    });
+  
+}

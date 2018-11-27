@@ -2,7 +2,7 @@
 	$servidorBD = "localhost"; 
 	$usuarioBD = "conexion";
 	$contrasenaBD = "root";
-	$nombreBD = "mus";
+	$nombreBD = "musica";
 	$conexion = mysqli_connect($servidorBD,$usuarioBD,$contrasenaBD,$nombreBD);
 	mysqli_query($conexion, "SET NAMES 'utf8'"); //Esta instrucción permite guardar eñes y acentos en la BD ;)
 	if(mysqli_connect_errno($conexion)){

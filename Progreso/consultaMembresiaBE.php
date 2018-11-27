@@ -8,13 +8,14 @@
 
 		if($tipo == 'consulta'){
 
-			$curp = $_POST['curp'];
+			$curp = $_POST['curp'];			
 			
-			$sql = "select * from Socio where curp = '$curp'";		
+			$sql = "select * from Socio where curp = '$curp'";
+			echo $sql . "<br>";
 			$res = mysqli_query($conexion, $sql);
 			$hay = mysqli_num_rows($res);
 
-
+			echo $hay."<br>";
 			if($hay == 1){
 
 				$tupla = mysqli_fetch_row($res);
@@ -36,11 +37,6 @@
 		echo "No se encontraron datos";
 	}
 
-		
-	//
-	//$sql1 = "select rfc, nombre, codigo from ganador where ";
-	//$res = mysqli_query($conexion, $sql1);
-	//while($tupla = mysqli_fetch_row($res)){
 
 ?>
 

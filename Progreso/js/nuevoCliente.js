@@ -44,3 +44,45 @@ function rellena(){
 	$("#expira").val(expira);	
 
 }
+
+$(document).ready(function(){
+	$("#formulario").validetta({
+		validators: {
+            regExp: {
+                curpExp : {
+                    pattern : /[A-Z|a-z][A-Z|a-z][A-Z|a-z][A-Z|a-z]\d\d\d\d\d\d[A-Z|a-z][A-Z|a-z][A-Z|a-z][A-Z|a-z][A-Z|a-z][A-Z|a-z]\d\d/,
+                    errorMessage : 'Debe contener formato de CURP'
+                }
+            }
+        },
+        onValid:function(e){
+        	e.preventDefault();
+        	$("#btnCrear").attr("disabled", true);
+        	$.ajax({
+		        method:"post",
+		        url:"subeCliente.php",
+		        data: $("#formulario").serialize(),        
+		        success:function(resp){    
+		        	if(resp == 1){
+		                $.alert({
+					        title: 'Todo bien',
+					        content: 'Se ha registrado al socio	',
+					        onDestroy:function(){
+                                $(location).attr("href", "./nuevoCliente.php");
+                            }					        
+					    });
+					} else {
+						$.alert({
+							title: 'Error',
+							content: 'Ese CURP ya está registrado',
+							onDestroy:function(){
+								$("#btnCrear").attr("disabled", false);
+								$("#btnCrear").blur();
+							}							
+						});
+					}
+		        }
+		    });
+        }
+	});
+});

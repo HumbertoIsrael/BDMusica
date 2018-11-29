@@ -20,11 +20,11 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">	    
 	    <meta name="viewport" content="width=device-width, initial-scale=1">	    	    
 	    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>	    
-	    <script type="text/javascript" src="./confirm330/js/jquery-confirm.js"></script>				
+	    <script type="text/javascript" src="./confirm330/js/jquery-confirm.js"></script>
 	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
 		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
-	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	    
+	    <link href="./iconfont/material-icons.css" rel="stylesheet">
 	    <link href="./validetta/validetta.min.css" rel="stylesheet">
 		<script type="text/javascript" src="./validetta/validetta.min.js"></script>
 		<script type="text/javascript" src="./validetta/validettaLang-es-ES.js"></script>

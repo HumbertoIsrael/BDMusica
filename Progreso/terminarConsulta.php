@@ -6,7 +6,7 @@
 	if (isset($_SESSION['modo'])) {
 		$tipo = $_SESSION['modo'];
 
-		if($tipo == 'consulta'){
+		if($tipo == 'consulta' || $tipo == 'caja'){
 			
 			$contra = $_POST['contra'];
 			$idSucursal = $_SESSION['idSucursal'];

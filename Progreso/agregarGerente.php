@@ -20,7 +20,7 @@
 	    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
 		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
-	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	    
+	    <link href="./iconfont/material-icons.css" rel="stylesheet">        
 	    <link href="./validetta/validetta.min.css" rel="stylesheet">
 		<script type="text/javascript" src="./validetta/validetta.min.js"></script>
 		<script type="text/javascript" src="./validetta/validettaLang-es-ES.js"></script>
@@ -94,7 +94,7 @@
 			</div>
 			<div class="row">
 				<div class="col s1 offset-s9">
-					<a class="btn-floating btn-large waves-effect waves-light" href="./"><i class="material-icons">keyboard_arrow_left</i></a>
+					<a class="btn-floating btn-large waves-effect waves-light" href="./gerentes.php"><i class="material-icons">keyboard_arrow_left</i></a>
 				</div>			  
 			</div>
 		</div>

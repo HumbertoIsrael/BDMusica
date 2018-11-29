@@ -5,7 +5,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta http-equiv="Refresh" content="0; url=./" />
     <?php
 } else {
-	$_SESSION['modo'] = 'consulta';
+	$_SESSION['modo'] = 'administracion';
 	header("location:index.php");
 }
 ?>

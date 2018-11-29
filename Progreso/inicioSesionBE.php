@@ -23,8 +23,7 @@
 		if($hay == 1){
 
 			$tupla = mysqli_fetch_row($res);
-		
-			$_SESSION['modo'] = 'consulta';
+			$_SESSION['usuario'] = $usuario;
 			$_SESSION['idSucursal'] = $tupla[0];
 
 

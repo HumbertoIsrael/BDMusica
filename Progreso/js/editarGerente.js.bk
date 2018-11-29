@@ -1,0 +1,43 @@
+function Emular(resp){
+
+    $("#rfc").focus();
+    $("#rfc").val(resp.rfc);
+    $("#nombre").focus();
+    $("#nombre").val(resp.nombre);
+    $("#apPat").focus();
+    $("#apPat").val(resp.apPat);
+    $("#apMat").focus();
+    $("#apMat").val(resp.apMat);
+    $("#usuario").focus();
+    $("#usuario").val(resp.usuario);
+    $("#tel").focus();
+    $("#tel").val(resp.tel);
+    $("#dir").focus();
+    $("#dir").val(resp.dir);
+    $("#rfc_in").focus();
+    $("#rfc").attr("disabled", true);    
+
+}
+
+function Busca(){
+
+	$.ajax({
+        method:"post",
+        url:"cargaGerente.php",
+        data:$("#formulario").serialize(),                
+        success:function(resp){              
+            if(resp == ""){
+                $("#contenido").html("No se encontraron resultados.");
+            }  else { 
+                $("#contenido").html("");
+                Emular(JSON.parse(resp));
+            }
+        }
+    });
+
+	return false;
+}
+
+$(document).ready(function(){
+    $("#formulario2").validetta();
+});

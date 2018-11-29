@@ -21,7 +21,7 @@
 		<link href="./confirm330/css/jquery-confirm.css" rel="stylesheet">
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">	    
 		<link href="./validetta/validetta.min.css" rel="stylesheet">		
-	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link href="./iconfont/material-icons.css" rel="stylesheet">
 	    <title>Gerentes</title>
 	</head>
 	<body>

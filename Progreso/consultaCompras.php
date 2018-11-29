@@ -37,7 +37,7 @@
 		<link href="./materialize/css/materialize.min.css" rel="stylesheet">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">		
 		<script type="text/javascript" src="./js/consultaCompras.js"></script>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="./iconfont/material-icons.css" rel="stylesheet">    
 		<title>Inventario</title>
 	</head>
 	<body>

@@ -23,7 +23,7 @@ $(document).ready(function(){
 		        	if(resp == 1){
 		                $.alert({
 					        title: 'Todo bien',
-					        content: 'Se ha registrado al socio	',
+					        content: 'Se ha registrado al gerente',
 					        onDestroy:function(){
                                 $(location).attr("href", "./agregarGerente.php");
                             }					        

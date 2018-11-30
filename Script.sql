@@ -8,8 +8,8 @@ create table Compra(idCompra int primary key not null, idProveedor varchar(45), 
 create table Cajero(rfc varchar(45) primary key not null, idSucursal int, dir varchar(45), nombre varchar(45), apPat varchar(45), apMat varchar(45), tel int, cond tinyint, foreign key(idSucursal) references Sucursal(idSucursal) on delete cascade on update cascade);
 create table Venta(idVenta int primary key not null auto_increment, idCajero varchar(45), idSocio varchar(45), fecha date, importe float, foreign key(idCajero) references Cajero(rfc) on delete cascade on update cascade, foreign key(idSocio) references Socio(curp) on delete cascade on update cascade);
 create table productosVta(idVenta int not null, idProducto int not null, unidades int, primary key(idVenta, idProducto), foreign key(idVenta) references Venta(idVenta) on delete cascade on update cascade, foreign key(idProducto) references Producto(idProducto) on delete cascade on update cascade);
-insert into Gerente values('OERA971231', 'Av. Mi moto Col. Al Pino Derrapante', 'blak', 'blak', 'Angel', 'Ortega', 'Ramirez', 55555555);
-insert into Gerente values('OERA971232', 'Av. Mi moto Col. Al Pino Derrapante', 'blak2', 'blak', 'Angel', 'Ortega', 'Ramirez', 55555555);
+insert into Gerente values('OERA971231', 'Av. Mi moto Col. Al Pino Derrapante', 'blak', SHA1('blak'), 'Angel', 'Ortega', 'Ramirez', 55555555);
+insert into Gerente values('OERA971232', 'Av. Mi moto Col. Al Pino Derrapante', 'blak2', SHA1('blak'), 'Angel', 'Ortega', 'Ramirez', 55555555);
 insert into Sucursal values(1, 'OERA971231', 'Av. El perrito #100', 'El perrito', 25252525);
 insert into Sucursal values(2, 'OERA971232', 'Calle 11 #2', 'Lomas Estrella', 10203040);
 insert into Proveedor values('XNOR335522', 'contacto@frms.com', 'El monte 22', 15231523, 'Frozen Music', 1);

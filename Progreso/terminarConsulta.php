@@ -11,7 +11,7 @@
 			$contra = $_POST['contra'];
 			$idSucursal = $_SESSION['idSucursal'];
 
-			$sql = "select count(*) from Gerente g, Sucursal s where g.rfc = s.idGerente and s.idSucursal = '$idSucursal' and g.password = '$contra'";
+			$sql = "select count(*) from Gerente g, Sucursal s where g.rfc = s.idGerente and s.idSucursal = '$idSucursal' and g.password = 	SHA1('$contra')";
 			
 			$res = mysqli_query($conexion, $sql);
 			$tupla = mysqli_fetch_row($res);

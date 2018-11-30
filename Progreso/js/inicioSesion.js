@@ -3,7 +3,7 @@ function login(){
         method:"post",
         url:"inicioSesionBE.php",
         data:$("#formulario").serialize(),                
-        success:function(resp){                                    	                	
+        success:function(resp){                                    	                	           
             if(resp == 1){                       
                 window.location = "menuGeneral.php";
             } else {

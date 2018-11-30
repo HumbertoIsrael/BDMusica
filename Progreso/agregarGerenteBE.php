@@ -22,7 +22,7 @@
 			$usuarios = mysqli_num_rows($res);
 
 			if($usuarios == 0){
-				$sql = "insert into Gerente values('$rfc', '$dir', '$usuario', '$contra', '$nombre', '$apPat', '$apMat', '$tel');";	
+				$sql = "insert into Gerente values('$rfc', '$dir', '$usuario', SHA1('$contra'), '$nombre', '$apPat', '$apMat', '$tel');";	
 				$res = mysqli_query($conexion, $sql);
 
 				$afectados = mysqli_affected_rows($conexion);			

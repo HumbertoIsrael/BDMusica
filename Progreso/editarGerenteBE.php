@@ -22,7 +22,7 @@
 			$usuarios = mysqli_num_rows($res);
 
 			if($usuarios == 0){
-				$sql = "update Gerente set dir = '$dir', usuario = '$usuario', password = '$contra', nombre = '$nombre', apPat = '$apPat', apMat = '$apMat', tel = '$tel' where rfc='$rfc'";					
+				$sql = "update Gerente set dir = '$dir', usuario = '$usuario', nombre = '$nombre', apPat = '$apPat', apMat = '$apMat', tel = '$tel' where rfc='$rfc'";					
 				$res = mysqli_query($conexion, $sql);
 
 				$afectados = mysqli_affected_rows($conexion);	

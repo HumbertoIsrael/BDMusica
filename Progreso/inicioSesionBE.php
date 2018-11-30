@@ -14,7 +14,8 @@
 		$contra = $_POST['contra'];		
 
 
-		$sql = "select s.idSucursal from Gerente g, Sucursal s where g.rfc = s.idGerente and g.usuario = '$usuario' and g.password = '$contra'";
+		$sql = "select s.idSucursal from Gerente g, Sucursal s where g.rfc = s.idGerente and g.usuario = '$usuario' and g.password = SHA1('$contra')";
+
 		$res = mysqli_query($conexion, $sql	);
 		$hay = mysqli_num_rows($res);
 

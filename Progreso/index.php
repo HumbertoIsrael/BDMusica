@@ -76,31 +76,31 @@
                     </div>          
                     <div class="row">
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Sucursales</button></a>
+                            <a href="sucursales.php"><button class="btn" style="width: 100%">Sucursales</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Productos</button></a>
+                            <a href="agregarProducto.php"><button class="btn" style="width: 100%">Agregar Producto</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Proveedores</button></a>
+                            <a href="agregarProveedor.php"><button class="btn" style="width: 100%">Agregar Proveedor</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Inventario</button></a>
+                            <a href="consultaInventario.php"><button class="btn" style="width: 100%">Inventario</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Gerentes</button></a>
+                            <a href="gerentes.php"><button class="btn" style="width: 100%">Gerentes</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Cajeros</button></a>
+                            <a href="agregarCajero.php"><button class="btn" style="width: 100%">Agregar Cajero</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Consulta de Compras</button></a>
+                            <a href="consultaCompras.php"><button class="btn" style="width: 100%">Consulta de Compras</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Consulta de Ventas</button></a>
+                            <a href="consultaVentas.php"><button class="btn" style="width: 100%">Consulta de Ventas</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
-                            <a href=".php"><button class="btn" style="width: 100%">Nueva Compra</button></a>
+                            <a href="nuevaCompra.php"><button class="btn" style="width: 100%">Nueva Compra</button></a>
                         </div>
                         <div class="col s12 m6 offset-m3 input-field">
                             <a href="cerrarSesion.php"><button class="btn cyan darken-3" style="width: 100%">Cerrar Sesión</button></a>

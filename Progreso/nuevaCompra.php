@@ -8,21 +8,21 @@
 
 		if($tipo == 'administracion'){
 
-		$sql = "select rfc, nombre from Proveedor;";
-		
-		$res = mysqli_query($conexion, $sql);
-		$proveedores = "";
-		while($tupla = mysqli_fetch_row($res)){
-			$proveedores .= "<option value=\"$tupla[0]\">$tupla[1]</option>\n";
-		}
+			$sql = "select rfc, nombre from Proveedor;";
+			
+			$res = mysqli_query($conexion, $sql);
+			$proveedores = "";
+			while($tupla = mysqli_fetch_row($res)){
+				$proveedores .= "<option value=\"$tupla[0]\">$tupla[1]</option>\n";
+			}
 
-		$sql = "select idProducto, nombre, precio from Producto;";
-		
-		$res = mysqli_query($conexion, $sql);
-		$productos = "";
-		while($tupla = mysqli_fetch_row($res)){
-			$productos .= "<option value=\"$tupla[0];$tupla[2]\">$tupla[1]</option>\n";
-		}
+			$sql = "select idProducto, nombre, precio from Producto;";
+			
+			$res = mysqli_query($conexion, $sql);
+			$productos = "";
+			while($tupla = mysqli_fetch_row($res)){
+				$productos .= "<option value=\"$tupla[0];$tupla[2]\">$tupla[1]</option>\n";
+			}
 
 			?>
 <!DOCTYPE html>

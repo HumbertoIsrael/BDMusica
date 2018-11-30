@@ -6,7 +6,7 @@
 	if (isset($_SESSION['modo'])) {
 		$tipo = $_SESSION['modo'];
 
-		if($tipo == 'consulta'){
+		if($tipo == 'consulta' || $tipo == 'administracion'){
 			$idProducto = $_POST['idProducto'];
 			
 			$sql = "select nombre, imagen, descripcion from Producto where idProducto=$idProducto";			

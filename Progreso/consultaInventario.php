@@ -5,7 +5,7 @@
 	if (isset($_SESSION['modo'])) {
 		$tipo = $_SESSION['modo'];
 
-		if($tipo == 'consulta'){
+		if($tipo == 'consulta' || $tipo == 'administracion'){
 			
 			?>
 
@@ -32,13 +32,13 @@
 					<h3>Inventario</h3>	
 				</div>
 			</div>
-			<p>
+			<p <?php if($tipo == 'administracion') echo "hidden"; ?> >
 			    <label>
 			        <input name="donde" type="radio" value="sucursal" checked onchange ="Carga()"/>
 			        <span>Esta sucursal</span>
 			    </label>
 		    </p>
-		    <p>	    
+		    <p <?php if($tipo == 'administracion') echo "hidden"; ?> >	    
 		      <label>
 		        <input name="donde" type="radio" value="todas" onchange="Carga();"/>
 		        <span>Todas las sucursales</span>
